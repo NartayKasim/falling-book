@@ -1,18 +1,18 @@
 :root {
    --font-family--default: "Noto Sans", sans-serif;
-   --font-family--header: "Noto Serif Display", serif;
+   --font-family--header: Century Gothic, sans-serif;
    --font-family--special-1: "Poiret One", cursive;
    --font-family--special-2: "Cinzel Decorative", cursive;
-   --font-color--primary: rgb(34, 34, 34);
-   --font-color--secondary: rgb(240, 222, 214);
+   --font-color--primary: #707070;
+   --font-color--secondary: rgb(238, 236, 231);
    --font-color--tertiary: rgb(254, 250, 244);
-   --font-color--accent: rgb(255, 87, 87);
+   --font-color--accent: var(--dark-orchid);
 
    --bg-color--primary: rgb(247, 245, 240);
    --bg-color--secondary: rgb(240, 234, 231);
    --bg-color--tertiary: rgb(236, 218, 208);
    --bg-color--quaternary: hsla(210, 16%, 93%, 0.5);
-   --bg-color--accent: rgb(255, 140, 140);
+   --bg-color--accent: var(--dark-orchid);
    --bg-color--shadowed: linear-gradient(
       135deg,
       rgba(236, 218, 208, 0.089) 0%,
@@ -37,6 +37,15 @@
    --davys-grey: hsla(210, 9%, 31%, 1);
    --gunmetal: hsla(210, 10%, 23%, 1);
    --charleston-green: hsla(210, 11%, 15%, 1);
+
+   --russian-violet: #10002bff;
+   --russian-violet-2: #240046ff;
+   --persian-indigo: #3c096cff;
+   --purple: #5a189aff;
+   --french-violet: #7b2cbfff;
+   --dark-orchid: #9d4eddff;
+   --heliotrope: #c77dffff;
+   --mauve: #e0aaffff;
 
    --spanish-viridian: hsla(165, 100%, 25%, 1);
    --spanish-green: hsla(137, 55%, 37%, 1);

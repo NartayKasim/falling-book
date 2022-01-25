@@ -20,7 +20,7 @@ export default function LibraryPage() {
 
    return (
       <div className={classes.libraryPageWrapper}>
-         <div className={classes.libraryPageHeader}>Your Booklists</div>
+         <div className={classes.libraryPageHeader}>YOUR BOOKLISTS</div>
          {booklists &&
             booklists.map((booklistObj) => (
                <Booklist

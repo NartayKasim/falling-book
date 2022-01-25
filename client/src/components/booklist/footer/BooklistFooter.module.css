@@ -4,8 +4,8 @@
    flex-direction: column;
    padding: 1.5rem;
    z-index: 1;
-   border-radius: 0 0 1rem 1rem;
    width: min(100rem, 100%);
+   background: var(--bg-color--secondary);
 }
 
 .footerTop {
@@ -16,22 +16,11 @@
 .footerBottom {
    display: flex;
    padding: 1rem;
+   justify-content: space-between;
 }
 
-.footerBottomTop {
-   width: 100%;
-}
-
-.footerBottomLeft {
-   width: 50%;
-   display: flex;
-}
-
-.footerBottomRight {
-   width: 50%;
-   display: flex;
-   gap: 3rem;
-   justify-content: flex-end;
+.bookCount {
+   font-weight: 600;
 }
 
 .footerItem {
@@ -42,18 +31,9 @@
    text-decoration: underline;
 }
 
-@media only screen and (max-width: 485px) {
+@media only screen and (max-width: 550px) {
    .footerBottom {
       flex-direction: column;
       padding-left: 1.5rem;
-   }
-
-   .footerBottom {
-      flex-direction: column;
-   }
-
-   .footerBottomRight {
-      flex-direction: column;
-      gap: 0;
    }
 }

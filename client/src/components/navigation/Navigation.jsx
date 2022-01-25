@@ -1,85 +1,127 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import NavigationMenu from "./menu/NavigationMenu";
-import NavigationSearch from "./search/NavigationSearch";
+import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { withRouter } from "../../app/hocs";
+import { useNavigate } from "react-router";
+import { toggleIsLoggedIn, clearBooklists } from "../../services/librarySlice";
+import { clearBookState } from "../../services/volumeInfoSlice";
+
+import homeIcon from "../../assets/home.png";
+import settingsIcon from "../../assets/settings.png";
+import libraryIcon from "../../assets/library.png";
+import signUpIcon from "../../assets/signUp.png";
+import loginIcon from "../../assets/login.png";
+import logoutIcon from "../../assets/logout.png";
+
 import classes from "./Navigation.module.css";
-import hamburger from "../../assets/hamburger.png";
+import Search from "./search/Search";
 
-const mobileExpand = {
-   hidden: {
-      height: 0,
-      overflow: "hidden",
-      opacity: 0,
-   },
-   shown: {
-      height: "auto",
-      transition: { duration: 0.25 },
-      opacity: 1,
-   },
-   removed: {
-      height: 0,
-      overflow: "hidden",
-      opacity: 0,
-      transition: { duration: 0.25 },
-   },
-};
+const Navigation = (props) => {
+   const navigate = useNavigate();
+   const location = props.location.pathname;
+   const dispatch = useDispatch();
+   const isLoggedIn = useSelector((state) => state.library.isLoggedIn);
 
-const mobileContract = {
-   hidden: {
-      height: "auto",
-      opacity: 1,
-   },
-   shown: {
-      height: 0,
-      overflow: "hidden",
-      opacity: 0,
-      transition: { duration: 0.25 },
-   },
-   removed: {
-      height: "auto",
-      transition: { duration: 0.25 },
-      opacity: 1,
-   },
-};
-
-const Navigation = () => {
-   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
+   const onLogoutClick = () => {
+      navigate("/");
+      sessionStorage.removeItem("persist:root");
+      axios.delete("/api/auth/logout");
+      dispatch(toggleIsLoggedIn());
+      dispatch(clearBookState());
+      dispatch(clearBooklists([]));
+   };
 
    return (
-      <>
-         <div className={classes.navigationWrapper}>
-            <div className={classes.navigation}>
-               <div className={classes.searchWrapper}>
-                  <NavigationSearch />
-               </div>
-               <div className={classes.menuWrapper}>
-                  <NavigationMenu />
-               </div>
-               <button
-                  className={classes.expandMenuButton}
-                  onClick={() => setDisplayMobileMenu(!displayMobileMenu)}
-               >
-                  <img src={hamburger} alt="" className={classes.hamburger} />
-               </button>
-            </div>
-            <AnimatePresence>
-               {displayMobileMenu && (
-                  <motion.div
-                     variants={
-                        displayMobileMenu ? mobileExpand : mobileContract
-                     }
-                     initial="hidden"
-                     animate="shown"
-                     exit="removed"
-                     className={classes.mobileMenuWrapper}
-                  >
-                     <NavigationMenu />
-                  </motion.div>
-               )}
-            </AnimatePresence>
+      <div className={classes.header}>
+         <div className={classes.headerTop}>
+            <div className={classes.logo}>Falling Book</div>
          </div>
-      </>
+         <div className={classes.navigationWrapper}>
+            <Search />
+            <div className={classes.navigation}>
+               <div
+                  className={classes.navLink}
+                  id={
+                     location === "/"
+                        ? classes.currentLocation
+                        : classes.default
+                  }
+                  onClick={() => navigate("/")}
+               >
+                  <img src={homeIcon} className={classes.icon} alt="" />
+                  Home
+               </div>
+               {isLoggedIn && (
+                  <div
+                     className={classes.navLink}
+                     id={
+                        location === "/settings"
+                           ? classes.currentLocation
+                           : classes.default
+                     }
+                     onClick={() => navigate("/settings")}
+                  >
+                     <img src={settingsIcon} className={classes.icon} alt="" />
+                     Settings
+                  </div>
+               )}
+               {isLoggedIn && (
+                  <div
+                     className={classes.navLink}
+                     id={
+                        location === "/library"
+                           ? classes.currentLocation
+                           : classes.default
+                     }
+                     onClick={() => navigate("/library")}
+                  >
+                     <img src={libraryIcon} className={classes.icon} alt="" />
+                     Library
+                  </div>
+               )}
+
+               {!isLoggedIn && (
+                  <div
+                     className={`${classes.navLink} ${classes.signUp}`}
+                     id={
+                        location === "/login"
+                           ? classes.currentLocation
+                           : classes.default
+                     }
+                     onClick={() => navigate("/login")}
+                  >
+                     <img src={signUpIcon} className={classes.icon} alt="" />
+                     Sign Up
+                  </div>
+               )}
+
+               {!isLoggedIn && (
+                  <div
+                     className={classes.navLink}
+                     id={
+                        location === "/login"
+                           ? classes.currentLocation
+                           : classes.default
+                     }
+                     onClick={() => navigate("/login")}
+                  >
+                     <img src={loginIcon} className={classes.icon} alt="" />
+                     Login
+                  </div>
+               )}
+
+               {isLoggedIn && (
+                  <div
+                     className={classes.navLink}
+                     onClick={() => onLogoutClick()}
+                  >
+                     <img src={logoutIcon} className={classes.icon} alt="" />
+                     Logout
+                  </div>
+               )}
+            </div>
+         </div>
+      </div>
    );
 };
 
-export default Navigation;
+export default withRouter(Navigation);

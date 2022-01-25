@@ -94,7 +94,7 @@ export default function Register() {
             <div className={classes.errors}>{errorState}</div>
          </div>
          <div className={classes.registerButtons}>
-            <Button onClickFunc={onRegisterClick}>Register</Button>
+            <Button onClickFunc={onRegisterClick}>Sign Up</Button>
          </div>
       </div>
    );

@@ -4,7 +4,7 @@
    flex-direction: column;
    width: 100%;
    border-radius: 1rem;
-   box-shadow: var(--box-shadow--emboss);
+   gap: 1rem;
 }
 
 .body {
@@ -17,16 +17,13 @@
    height: 187px;
    gap: 3rem;
    padding: 3rem;
-   border-radius: 1rem 1rem 0 0;
    z-index: 0;
-   box-shadow: var(--box-shadow--engrave);
-   background: var(--bg-color--shadowed);
+   background: var(--bg-color--secondary);
 }
 
 @media only screen and (max-width: 485px) {
    .booklist {
       box-shadow: none;
-      background: var(--bg-color--tertiary);
    }
 
    .body {

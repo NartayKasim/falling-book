@@ -32,7 +32,7 @@
       "tabWidth": 3
    },
    "scripts": {
-      "start": "nodemon",
+      "start": "cd client && react-scripts start",
       "build": "cd client && react-scripts build",
       "test": "react-scripts test",
       "eject": "react-scripts eject",

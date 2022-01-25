@@ -28,7 +28,7 @@ const LoginPage = () => {
                         : classes.unselected
                   }
                >
-                  Register
+                  Sign Up
                </div>
             </div>
             <div className={classes.body}>

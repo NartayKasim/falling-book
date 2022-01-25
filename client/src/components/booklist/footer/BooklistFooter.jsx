@@ -22,45 +22,41 @@ export default function BooklistFooter({
             />
          </div>
          <div className={classes.footerBottom}>
-            <div className={classes.footerBottomLeft}>
-               <div className={classes.bookCount}>
-                  Number of Books: {books.length}
-               </div>
+            <div className={classes.bookCount}>
+               Number of Books: {books.length}
             </div>
-            <div className={classes.footerBottomRight}>
-               {booklistObj.booklist_title !== "Read Books" && (
-                  <>
-                     <div
-                        className={classes.footerItem}
-                        onClick={() => setEditTitle(!editTitle)}
-                     >
-                        Rename Booklist
-                     </div>
-                     <div
-                        className={classes.footerItem}
-                        onClick={() => onBooklistDeleteClick()}
-                     >
-                        Delete Booklist
-                     </div>
-                     {!editBooks && (
-                        <div
-                           className={classes.footerItem}
-                           onClick={() => onExpandEditClick()}
-                        >
-                           Edit Books
-                        </div>
-                     )}
-                  </>
-               )}
-               {onExpandEditClick && (
+            {booklistObj.booklist_title !== "Read Books" && (
+               <>
                   <div
                      className={classes.footerItem}
-                     onClick={() => onExpandEditClick()}
+                     onClick={() => setEditTitle(!editTitle)}
                   >
-                     Expand Booklist
+                     Rename Booklist
                   </div>
-               )}
-            </div>
+                  <div
+                     className={classes.footerItem}
+                     onClick={() => onBooklistDeleteClick()}
+                  >
+                     Delete Booklist
+                  </div>
+                  {!editBooks && (
+                     <div
+                        className={classes.footerItem}
+                        onClick={() => onExpandEditClick()}
+                     >
+                        Edit Books
+                     </div>
+                  )}
+               </>
+            )}
+            {onExpandEditClick && (
+               <div
+                  className={classes.footerItem}
+                  onClick={() => onExpandEditClick()}
+               >
+                  Expand Booklist
+               </div>
+            )}
          </div>
       </div>
    );

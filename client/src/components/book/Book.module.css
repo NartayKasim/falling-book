@@ -2,8 +2,9 @@
    position: relative;
    display: flex;
    flex-direction: column;
-   width: min(65rem, 100%);
+   width: 100%;
    gap: 1rem;
+   padding: 0 2rem;
 }
 
 .bookHeader {
@@ -16,16 +17,11 @@
    font-weight: 600;
    font-family: var(--font-family--header);
    font-size: 2.5rem;
-   padding-left: 0.5rem;
    cursor: pointer;
 }
 
 .titleWrapper:hover {
    text-decoration: underline;
-}
-
-.authorsWrapper {
-   padding-left: 2rem;
 }
 
 .bookBody {
@@ -36,7 +32,6 @@
 }
 
 .bookBodyLeft {
-   padding-left: 2rem;
    position: relative;
 }
 
@@ -80,7 +75,7 @@
    .bookWrapper {
       flex-direction: column;
       padding: 2rem;
-      padding-bottom: 3rem;
+      width: min(56rem, 100%);
       background: var(--bg-color--secondary);
    }
 

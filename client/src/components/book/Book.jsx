@@ -9,18 +9,6 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { updateUserBooks } from "../../services/librarySlice";
-// import { AnimatePresence, motion } from "framer-motion";
-
-// const bookVariant = {
-//    hidden: {
-//       boxShadow: "none",
-//    },
-//    shown: {
-//       boxShadow:
-//          "3px 3px 6px rgb(223, 210, 204), -3px -1px 6px rgb(255, 255, 255), -1px -3px 6px rgb(255, 255, 255)",
-//       transition: { duration: 0.5 },
-//    },
-// };
 
 export default function Book({ searchResult }) {
    const isLoggedIn = useSelector((state) => state.library.isLoggedIn);

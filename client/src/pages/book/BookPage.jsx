@@ -2,7 +2,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { withRouter } from "../../app/hocs";
 import { purgeNonUser, updateUserBooks } from "../../services/librarySlice";
 import { AnimatePresence, motion } from "framer-motion";
+
 import classes from "./BookPage.module.css";
+
 import Cover from "../../components/book/cover/Cover";
 import Authors from "../../components/book/authors/Authors";
 import Rating from "../../components/book/ratings/Rating";
@@ -50,7 +52,6 @@ const BookPage = (props) => {
    const isLoggedIn = useSelector((state) => state.library.isLoggedIn);
 
    const updateBook = (bookObj) => {
-      console.log(bookObj);
       dispatch(updateUserBooks(bookObj));
    };
 

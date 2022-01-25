@@ -2,7 +2,6 @@ import classes from "./Login.module.css";
 import Button from "../../../components/common/button/Button";
 import emailIcon from "../../../assets/email.png";
 import passwordIcon from "../../../assets/password.png";
-import logo from "../../../assets/Logo.png";
 
 import axios from "axios";
 import { useState } from "react";
@@ -37,9 +36,6 @@ export default function Login() {
 
    return (
       <div className={classes.loginWrapper}>
-         <div className={classes.loginHeader}>
-            <img className={classes.logo} src={logo} alt="logo" />
-         </div>
          <div className={classes.loginBody}>
             <div className={classes.labels}>Email</div>
             <div className={classes.inputWrapper}>
