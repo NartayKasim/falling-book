@@ -1,31 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.008cd4a2.chunk.css",
-    "main.js": "/static/js/main.cead220f.chunk.js",
-    "main.js.map": "/static/js/main.cead220f.chunk.js.map",
+    "main.css": "/static/css/main.20386dec.chunk.css",
+    "main.js": "/static/js/main.28129069.chunk.js",
+    "main.js.map": "/static/js/main.28129069.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9ef2a082.js",
     "runtime-main.js.map": "/static/js/runtime-main.9ef2a082.js.map",
-    "static/js/2.b3965dc9.chunk.js": "/static/js/2.b3965dc9.chunk.js",
-    "static/js/2.b3965dc9.chunk.js.map": "/static/js/2.b3965dc9.chunk.js.map",
+    "static/js/2.b47e8c49.chunk.js": "/static/js/2.b47e8c49.chunk.js",
+    "static/js/2.b47e8c49.chunk.js.map": "/static/js/2.b47e8c49.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.008cd4a2.chunk.css.map": "/static/css/main.008cd4a2.chunk.css.map",
-    "static/js/2.b3965dc9.chunk.js.LICENSE.txt": "/static/js/2.b3965dc9.chunk.js.LICENSE.txt",
-    "static/media/FooterBooks.82a69387.svg": "/static/media/FooterBooks.82a69387.svg",
-    "static/media/Logo.de66e123.png": "/static/media/Logo.de66e123.png",
-    "static/media/SpacerOne.7b437f71.svg": "/static/media/SpacerOne.7b437f71.svg",
-    "static/media/SpacerThree.680a8395.svg": "/static/media/SpacerThree.680a8395.svg",
-    "static/media/SpacerTwo.0344e0f5.svg": "/static/media/SpacerTwo.0344e0f5.svg",
-    "static/media/booklistBg.cd571d16.png": "/static/media/booklistBg.cd571d16.png",
+    "static/css/main.20386dec.chunk.css.map": "/static/css/main.20386dec.chunk.css.map",
+    "static/js/2.b47e8c49.chunk.js.LICENSE.txt": "/static/js/2.b47e8c49.chunk.js.LICENSE.txt",
     "static/media/booklistSplash.61e5f3b1.png": "/static/media/booklistSplash.61e5f3b1.png",
-    "static/media/reviewBg.8e92cb3c.png": "/static/media/reviewBg.8e92cb3c.png",
     "static/media/reviewSplash.3a72b0a7.png": "/static/media/reviewSplash.3a72b0a7.png",
-    "static/media/searchBg.c69d42f9.png": "/static/media/searchBg.c69d42f9.png",
     "static/media/searchSplash.f40aba78.png": "/static/media/searchSplash.f40aba78.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9ef2a082.js",
-    "static/js/2.b3965dc9.chunk.js",
-    "static/css/main.008cd4a2.chunk.css",
-    "static/js/main.cead220f.chunk.js"
+    "static/js/2.b47e8c49.chunk.js",
+    "static/css/main.20386dec.chunk.css",
+    "static/js/main.28129069.chunk.js"
   ]
 }
