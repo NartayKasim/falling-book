@@ -114,7 +114,7 @@ module.exports = {
 
    getReviews: async (req, res) => {
       const { book_id } = req.params;
-      const user_id = req.session?.user?.user_id;
+      const user_id = req.session.user.user_id;
       const reviews = await getReviews(req, book_id, user_id || null);
       res.status(200).send(reviews);
    },
