@@ -27,5 +27,5 @@ My initial plan was to create a clone, piggy-backing off of the Goodreads API, b
 3. User book rating.
 4. User book review composition.
 5. Custom booklist creation.
-6. When a GoogleBooks search result is either rated, reviewed, or added to a user-created booklist, that result gets saved unto the appropriate PSQL. Form then on, Any time that book turns up as a search result, the information related to it is now retrieved from the db, instead of GoogleBooks.
+6. When a GoogleBooks search result is either rated, reviewed, or added to a user-created booklist, that result gets saved unto the appropriate table. Form then on, Any time that book turns up as a search result, the information related to it is now retrieved from the db, instead of GoogleBooks.
 
