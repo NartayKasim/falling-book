@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Falling Book
+### A social book search, review, and rating aggregator with custom booklist-making functionality.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[LIVE SITE](https://www.fallingbook.com)
 
-## Available Scripts
+## Stack:
+- React
+- Express
+- PostgreSQL
 
-In the project directory, you can run:
+## Relevant Miscellaneous Technologies:
+- Redux Toolkit (state management)
+- FramerMotion (animation / transitions)
 
-### `npm start`
+## Premise: 
+The most popular go-to website for book lovers is GoodReads. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In addition to its useful booklist-creation functionality, GoodReads catalogues books and allows users to review and rate books they've read.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+My initial plan was to create a clone, piggy-backing off of the Goodreads API, but, I was about a year too late, as GoodReads stopped issuing API keys about a year before I set off on this project. 
 
-### `npm test`
+**I didn't want to start from scratch and create my own book database. Starting out with an empty books table would mean that I would need to code book-adding functionality to for the users and, since this is a portfolio projet, there were no users available, anyway. After trying several premium and free book databases, I decided on a kind of hybrid book db, augmented by the GoogleBooks API (elaboration below).**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## MVP / full functionality break-down:
+1. GoogleBooks API functionality for book searches.
+2. User creation.
+3. User book rating.
+4. User book review composition.
+5. Custom booklist creation.
+6. When a GoogleBooks search result is either rated, reviewed, or added to a user-created booklist, that result gets saved unto the appropriate table. Form then on, Any time that book turns up as a search result, the information related to it is now retrieved from the db, instead of GoogleBooks.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
