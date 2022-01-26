@@ -1,18 +1,16 @@
 :root {
    --font-family--default: "Noto Sans", sans-serif;
-   --font-family--header: Century Gothic, sans-serif;
-   --font-family--special-1: "Poiret One", cursive;
-   --font-family--special-2: "Cinzel Decorative", cursive;
+   --font-family--header: century-gothic, sans-serif;
    --font-color--primary: #707070;
    --font-color--secondary: rgb(238, 236, 231);
    --font-color--tertiary: rgb(254, 250, 244);
-   --font-color--accent: var(--dark-orchid);
+   --font-color--accent: rgba(157, 78, 221, 0.637);
 
    --bg-color--primary: rgb(247, 245, 240);
    --bg-color--secondary: rgb(240, 234, 231);
    --bg-color--tertiary: rgb(236, 218, 208);
    --bg-color--quaternary: hsla(210, 16%, 93%, 0.5);
-   --bg-color--accent: var(--dark-orchid);
+   --bg-color--accent: rgba(157, 78, 221, 0.637);
    --bg-color--shadowed: linear-gradient(
       135deg,
       rgba(236, 218, 208, 0.089) 0%,

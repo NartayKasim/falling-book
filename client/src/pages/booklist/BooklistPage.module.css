@@ -1,10 +1,11 @@
 .booklistPageWrapper {
    position: relative;
-   width: min(100rem, 100%);
+   width: min(60rem, 100%);
    display: flex;
    flex-direction: column;
    margin: 5vh auto;
    align-items: center;
+   padding: 0 1rem;
 }
 
 .booklistPageBody {
