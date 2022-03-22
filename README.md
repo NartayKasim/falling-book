@@ -15,11 +15,11 @@
 ## Premise: 
 The most popular go-to website for book lovers is GoodReads. 
 
-In addition to its useful booklist-creation functionality, GoodReads catalogues books and allows users to review and rate books they've read.
+In addition to its useful booklist-creation functionality, GoodReads cataloges books and allows users to review and rate books they've read.
 
 My initial plan was to create a clone, piggy-backing off of the Goodreads API, but, I was about a year too late, as GoodReads stopped issuing API keys about a year before I set off on this project. 
 
-**I didn't want to start from scratch and create my own book database. Starting out with an empty books table would mean that I would need to code book-adding functionality to for the users and, since this is a portfolio projet, there were no users available, anyway. After trying several premium and free book databases, I decided on a kind of hybrid book db, augmented by the GoogleBooks API (elaboration below).**
+**I didn't want to start from scratch and create my own book database. Starting out with an empty books table would mean that I would need to code book-adding functionality to for the users and, since this is a portfolio project, there were no users available, anyway. After trying several premium and free book databases, I decided on a kind of hybrid book db, augmented by the GoogleBooks API (elaboration below).**
 
 ## MVP / full functionality break-down:
 1. GoogleBooks API functionality for book searches.
